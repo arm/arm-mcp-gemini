@@ -1,0 +1,29 @@
+{
+  "name": "arm-mcp-gemini",
+  "version": "1.0.0",
+  "description": "Gemini CLI extension that adds the Arm MCP Server and an /arm-migration workflow command.",
+  "settings": [
+    {
+      "name": "Project Directory",
+      "description": "Absolute host path to the root directory of the project code you want mounted into the Arm MCP Server for running code scan.",
+      "envVar": "ARM_MCP_PROJECT_ROOT",
+      "sensitive": false
+    }
+  ],
+  "mcpServers": {
+    "arm_mcp_server": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "--pull=always",
+        "-i",
+        "-v",
+        "${ARM_MCP_PROJECT_ROOT}:/workspace",
+        "armlimited/arm-mcp:latest"
+      ],
+      "env": {},
+      "timeout": 60000
+    }
+  }
+}
