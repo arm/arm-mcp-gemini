@@ -2,7 +2,7 @@
 
 This repository contains a Gemini CLI extension that adds:
 
-* the Arm MCP Server Docker configuration you requested
+* the Arm MCP Server Docker configuration
 * a reusable `/arm-migration` custom command for x86-to-Arm migration work
 * an install-time prompt for the project root directory to mount into the container
 
