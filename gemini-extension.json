@@ -1,7 +1,7 @@
 {
   "name": "arm-mcp-gemini",
-  "version": "1.0.0",
-  "description": "Gemini CLI extension that adds the Arm MCP Server and an /arm-migration workflow command.",
+  "version": "1.1.0",
+  "description": "Gemini CLI extension that adds the Arm MCP Server plus /arm-migration, /arm-hotspots-optimization, /arm-full-optimization, and /arm-vs-x86-performance-comparison workflow commands.",
   "settings": [
     {
       "name": "Project Directory",
