@@ -1,12 +1,3 @@
-# Gemini CLI Custom Slash Command: /compare-post-migration
-#
-# Location: Place this file in your project's .gemini/commands/ directory
-#           For project-scoped: <project>/.gemini/commands/compare-post-migration.toml
-#           For user-scoped: ~/.gemini/commands/compare-post-migration.toml
-#
-# Usage: Run the command in Gemini CLI by typing:
-#        /compare-post-migration
-
 description = "Guide a user through APX code_hotspots profiling on x86 and Arm hosts, then report architecture-driven performance delta and price-performance signals"
 
 prompt = """

@@ -1,12 +1,3 @@
-# Gemini CLI Custom Slash Command: /performance-advanced
-#
-# Location: Place this file in your project's .gemini/commands/ directory
-#           For project-scoped: <project>/.gemini/commands/performance-advanced.toml
-#           For user-scoped: ~/.gemini/commands/performance-advanced.toml
-#
-# Usage: Run the command in Gemini CLI by typing:
-#        /performance-advanced
-
 description = "Drive expert-level iterative Arm performance tuning across code_hotspots, instruction_mix, cpu_microarchitecture, and memory recipes with measured deltas after each code change"
 
 prompt = """

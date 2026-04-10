@@ -1,12 +1,3 @@
-# Gemini CLI Custom Slash Command: /performance-beginner
-#
-# Location: Place this file in your project's .gemini/commands/ directory
-#           For project-scoped: <project>/.gemini/commands/performance-beginner.toml
-#           For user-scoped: ~/.gemini/commands/performance-beginner.toml
-#
-# Usage: Run the command in Gemini CLI by typing:
-#        /performance-beginner
-
 description = "Guide a beginner through Arm cloud performance tuning using ATP code_hotspots baseline, targeted code changes, and delta validation"
 
 prompt = """
