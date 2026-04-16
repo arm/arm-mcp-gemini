@@ -1,12 +1,24 @@
 {
   "name": "arm-mcp-gemini",
-  "version": "1.0.0",
-  "description": "Gemini CLI extension that adds the Arm MCP Server and an /arm-migration workflow command.",
+  "version": "2.0.0",
+  "description": "Gemini CLI extension that adds the Arm MCP Server plus /arm-migration, /arm-hotspots-optimization, /arm-full-optimization, and /arm-vs-x86-performance-comparison workflow commands.",
   "settings": [
     {
       "name": "Project Directory",
       "description": "Absolute host path to the root directory of the project code you want mounted into the Arm MCP Server for running code scan.",
       "envVar": "ARM_MCP_PROJECT_ROOT",
+      "sensitive": false
+    },
+    {
+      "name": "Arm Performix SSH Private Key",
+      "description": "Absolute host path to the SSH private key file used to SSH into the target instance for Arm Performix profiling.",
+      "envVar": "ARM_MCP_SSH_PRIVATE_KEY",
+      "sensitive": true
+    },
+    {
+      "name": "Arm Performix SSH Known Hosts",
+      "description": "Absolute host path to the known_hosts file used when SSHing into the target instance for Arm Performix profiling.",
+      "envVar": "ARM_MCP_SSH_KNOWN_HOSTS",
       "sensitive": false
     }
   ],
@@ -20,6 +32,10 @@
         "-i",
         "-v",
         "${ARM_MCP_PROJECT_ROOT}:/workspace",
+        "-v",
+        "${ARM_MCP_SSH_PRIVATE_KEY}:/run/keys/ssh-key.pem:ro",
+        "-v",
+        "${ARM_MCP_SSH_KNOWN_HOSTS}:/run/keys/known_hosts:ro",
         "armlimited/arm-mcp:latest"
       ],
       "env": {},
